@@ -23,7 +23,8 @@ Env::~Env()
 }
 
 
-int Env::getHeight(void){
+int Env::getHeight(void) const{
+    //this->height = 10;
     return this->height;
 }
 
@@ -31,11 +32,12 @@ int Env::getWidth(void){
     return this->width;
 }
 
-void Env::setHeight(int height){
+void Env::setHeight(const int& height){
     this->height = height;
+    //height = 10;
 }
 
-void Env::setWidth(int width){
+void Env::setWidth(const int& width){
     this->width = width;
 }
 

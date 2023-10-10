@@ -1,0 +1,12 @@
+{
+    "configurations": [
+    {
+        "type": "lldb",
+        "request": "launch",
+        "name": "Week01_example",
+        "program": "/Users/E17384/Work/Teaching/2023/COSC2804/cosc2804-workshops-2023-Sep/Week02/Class01/workshop/week01_example",
+        "args": [],
+        "cwd": "/Users/E17384/Work/Teaching/2023/COSC2804/cosc2804-workshops-2023-Sep/Week02/Class01/workshop/"
+    }
+    ]
+}

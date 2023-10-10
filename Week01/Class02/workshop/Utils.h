@@ -1,15 +1,24 @@
 #include <iostream>
 #include "Env.h"
 #include <mcpp/mcpp.h>
+#include <stdexcept>
 
-void ReadEnvSize(int& envHeight, int& envWidth){
+bool ReadEnvSize(int& envHeight, int& envWidth){
+    bool success = true;
     std::cout << "Enter the size of the rectangular Environment (H, W): " << std::endl;
     std::cin >> envHeight;
     std::cin >> envWidth;
+
+    if(envHeight == 0 || envWidth == 0){
+        success = false;
+        // throw std::invalid_argument("Height or width argument is not correct!");
+
+    }
+    return success;
 }
 
 void ReadEnvStart(mcpp::Coordinate** start){
-    int x=0;
+    int x=1;
     int y=0;
     int z=0;
     std::cout << "Enter the start coordinate of rectangular Environment (X, Y, Z): " << std::endl;

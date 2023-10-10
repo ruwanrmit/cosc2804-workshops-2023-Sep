@@ -14,15 +14,18 @@ class Env
 public:
     //constructors and deconstructors
     Env();
+
+    //Contract:
+    // height and width must be integers greater than zero
     Env(int height, int width);
     ~Env();
 
     //other methods
-    int getHeight(void);
+    int getHeight(void) const;
     int getWidth(void);
 
-    void setHeight(int height);
-    void setWidth(int width);
+    void setHeight(const int& height);
+    void setWidth(const int& width);
 
     void setStart(mcpp::Coordinate* start);
     mcpp::Coordinate* getStart(void);
